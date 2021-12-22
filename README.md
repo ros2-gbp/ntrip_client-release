@@ -1,3 +1,26 @@
+## ntrip_client (rolling) - 1.0.0-2
+
+The packages in the `ntrip_client` repository were released into the `rolling` distro by running `/home/microstrain/.local/bin/bloom-release --rosdistro rolling --track rolling ntrip_client --no-web` on `Wed, 22 Dec 2021 19:39:38 -0000`
+
+The `ntrip_client` package was released.
+
+Version of package(s) in repository `ntrip_client`:
+
+- upstream repository: https://github.com/LORD-MicroStrain/ntrip_client.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `1.0.0-1`
+- new version: `1.0.0-2`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.16`
+- rosdep version: `0.18.0`
+- rosdistro version: `0.8.0`
+- vcstools version: `0.1.42`
+
+
 ## ntrip_client (rolling) - 1.0.0-1
 
 The packages in the `ntrip_client` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling --track rolling ntrip_client --edit` on `Mon, 13 Dec 2021 16:26:50 -0000`
