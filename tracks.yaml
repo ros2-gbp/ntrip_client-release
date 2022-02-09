@@ -79,4 +79,5 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/LORD-MicroStrain/ntrip_client.git
-    version: :{auto}
+    version: 1.0.1
+    version_saved: :{auto}
