@@ -29,11 +29,18 @@ class NTRIPRos(Node):
         ('host', '127.0.0.1'),
         ('port', 2101),
         ('mountpoint', 'mount'),
-        ('ntrip_version', ''),
+        ('ntrip_version', 'None'),
         ('authenticate', False),
         ('username', ''),
         ('password', ''),
-        ('rtcm_frame_id', 'odom')
+        ('ssl', False),
+        ('cert', 'None'),
+        ('key', 'None'),
+        ('ca_cert', 'None'),
+        ('rtcm_frame_id', 'odom'),
+        ('reconnect_attempt_max', NTRIPClient.DEFAULT_RECONNECT_ATTEMPT_MAX),
+        ('reconnect_attempt_wait_seconds', NTRIPClient.DEFAULT_RECONNECT_ATEMPT_WAIT_SECONDS),
+        ('rtcm_timeout_seconds', NTRIPClient.DEFAULT_RTCM_TIMEOUT_SECONDS),
       ]
     )
 
@@ -44,7 +51,7 @@ class NTRIPRos(Node):
 
     # Optionally get the ntrip version from the launch file
     ntrip_version = self.get_parameter('ntrip_version').value
-    if ntrip_version == '':
+    if ntrip_version == 'None':
       ntrip_version = None
 
     # Set the log level to debug if debug is true
@@ -85,6 +92,23 @@ class NTRIPRos(Node):
       loginfo=self.get_logger().info,
       logdebug=self.get_logger().debug
     )
+
+    # Get some SSL parameters for the NTRIP client
+    self._client.ssl = self.get_parameter('ssl').value
+    self._client.cert = self.get_parameter('cert').value
+    self._client.key = self.get_parameter('key').value
+    self._client.ca_cert = self.get_parameter('ca_cert').value
+    if self._client.cert == 'None':
+      self._client.cert = None
+    if self._client.key == 'None':
+      self._client.key = None
+    if self._client.ca_cert == 'None':
+      self._client.ca_cert = None
+
+    # Get some timeout parameters for the NTRIP client
+    self._client.reconnect_attempt_max = self.get_parameter('reconnect_attempt_max').value
+    self._client.reconnect_attempt_wait_seconds = self.get_parameter('reconnect_attempt_wait_seconds').value
+    self._client.rtcm_timeout_seconds = self.get_parameter('rtcm_timeout_seconds').value
 
   def run(self):
     # Connect the client
