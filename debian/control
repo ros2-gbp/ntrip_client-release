@@ -1,0 +1,12 @@
+Source: ros-rolling-ntrip-client
+Section: misc
+Priority: optional
+Maintainer: Rob Fisher <rob.fisher@parker.com>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-mavros-msgs, ros-rolling-nmea-msgs, ros-rolling-rclpy, ros-rolling-std-msgs, ros-rolling-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: https://github.com/LORD-MicroStrain/ntrip_client
+Standards-Version: 3.9.2
+
+Package: ros-rolling-ntrip-client
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, ros-rolling-mavros-msgs, ros-rolling-nmea-msgs, ros-rolling-rclpy, ros-rolling-std-msgs, ros-rolling-ros-workspace
+Description: NTRIP client that will publish RTCM corrections to a ROS topic, and optionally subscribe to NMEA messages to send to an NTRIP server
