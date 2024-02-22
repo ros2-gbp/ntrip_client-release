@@ -1,0 +1,12 @@
+Source: ros-humble-ntrip-client
+Section: misc
+Priority: optional
+Maintainer: Rob Fisher <rob.fisher@parker.com>
+Build-Depends: debhelper (>= 9.0.0), libstd-msgs-dev, python3-std-msgs, ros-humble-nmea-msgs, ros-humble-rclpy, ros-humble-rtcm-msgs, ros-std-msgs, ros-humble-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: https://github.com/LORD-MicroStrain/ntrip_client
+Standards-Version: 3.9.2
+
+Package: ros-humble-ntrip-client
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, libstd-msgs-dev, python3-std-msgs, ros-humble-nmea-msgs, ros-humble-rclpy, ros-humble-rtcm-msgs, ros-std-msgs, ros-humble-ros-workspace
+Description: NTRIP client that will publish RTCM corrections to a ROS topic, and optionally subscribe to NMEA messages to send to an NTRIP server
