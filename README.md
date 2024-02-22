@@ -1,3 +1,26 @@
+## ntrip_client (rolling) - 1.3.0-1
+
+The packages in the `ntrip_client` repository were released into the `rolling` distro by running `/usr/bin/bloom-release ntrip_client --rosdistro rolling --no-web --non-interactive` on `Thu, 22 Feb 2024 22:41:00 -0000`
+
+The `ntrip_client` package was released.
+
+Version of package(s) in repository `ntrip_client`:
+
+- upstream repository: https://github.com/LORD-MicroStrain/ntrip_client.git
+- release repository: https://github.com/ros2-gbp/ntrip_client-release.git
+- rosdistro version: `1.2.0-2`
+- old version: `1.2.0-2`
+- new version: `1.3.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## ntrip_client (iron) - 1.3.0-1
 
 The packages in the `ntrip_client` repository were released into the `iron` distro by running `/usr/bin/bloom-release ntrip_client --rosdistro iron --no-web --non-interactive` on `Thu, 22 Feb 2024 22:40:09 -0000`
