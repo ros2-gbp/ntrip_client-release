@@ -6,7 +6,7 @@ package_name = 'ntrip_client'
 
 setup(
     name=package_name,
-    version='1.3.0',
+    version='1.4.0',
     packages=[package_name],
     package_dir={'': 'src'},
     data_files=[
@@ -30,6 +30,8 @@ setup(
     license='MIT License',
     tests_require=['pytest'],
     scripts=[
-      'scripts/ntrip_ros.py'
+      'scripts/ntrip_ros.py',
+      'scripts/ntrip_ros_base.py',
+      'scripts/ntrip_serial_device_ros.py'
     ]
 )
